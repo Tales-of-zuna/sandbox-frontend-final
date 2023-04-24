@@ -10,12 +10,44 @@
               src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW4ESm?ver=c63e"
               alt=""
             />
+            <v-menu
+              open-on-hover
+              bottom
+              transition="slide-y-transition"
+              offset-y
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  v-bind="attrs"
+                  v-on="on"
+                  text
+                  color="grey darken-3 "
+                  class="text--text text-capitalize ml-5"
+                  >Утас</v-btn
+                >
+              </template>
+              <v-sheet color="white" class="flex pa-10 justify-center"
+                ><v-row class="d-flex justify-center"
+                  ><v-col cols="9" class="d-flex justify-center"
+                    ><v-card
+                      v-for="hola in 6"
+                      :key="hola"
+                      hover
+                      class="mx-4 px-15 py-10"
+                      ><div class="d-flex justify-center">
+                        <v-icon x-large>mdi-ghost</v-icon>
+                      </div>
+                      <p
+                        class="text-center font-weight-bold text-subtitle-2 ma-0 text--secondary"
+                      >
+                        Apple
+                      </p></v-card
+                    ></v-col
+                  ></v-row
+                ></v-sheet
+              >
+            </v-menu>
             <v-btn
-              text
-              color="grey darken-3 "
-              class="text--text text-capitalize ml-5"
-              >Утас</v-btn
-            ><v-btn
               text
               color="grey darken-3"
               class="text--text text-capitalize ml-5"
